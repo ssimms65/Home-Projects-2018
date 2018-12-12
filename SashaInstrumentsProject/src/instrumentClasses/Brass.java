@@ -7,11 +7,11 @@ public class Brass extends Instruments {
 	private int brassInstrumentId;
 
 	// Overload constructors
-	public Brass(String strNewInstrumentGroup, String strNewInstrumentName, int intNewInstrumentId,
-			String strNewBrassInstrumentName, int intNewBrassInstrumentId) {
-		super(strNewInstrumentGroup, strNewInstrumentName, intNewInstrumentId);
-		this.brassInstrumentName = strNewBrassInstrumentName;
-		this.brassInstrumentId = intNewBrassInstrumentId;
+	public Brass(String newInstrumentGroup, String newInstrumentName, int newInstrumentId,
+			String newBrassInstrumentName, int newBrassInstrumentId) {
+		super(newInstrumentGroup, newInstrumentName, newInstrumentId);
+		this.brassInstrumentName = newBrassInstrumentName;
+		this.brassInstrumentId = newBrassInstrumentId;
 	}
 
 	// Display Class
@@ -23,22 +23,21 @@ public class Brass extends Instruments {
 
 	}
 
-	// Getters and setters for BrassInstrumentName
+	//Getters and setters
 	public String getBrassInstrumentName() {
 		return brassInstrumentName;
 	}
 
-	public void setBrassInstrumentName(String strNewBrassInstrumentName) {
-		this.brassInstrumentName = strNewBrassInstrumentName;
+	public void setBrassInstrumentName(String brassInstrumentName) {
+		this.brassInstrumentName = brassInstrumentName;
 	}
 
-	// Getters and setters for BrassInstrumentId
-	public int getIntBrassInstrumentId() {
+	public int getBrassInstrumentId() {
 		return brassInstrumentId;
 	}
 
-	public void setIntBrassInstrumentId(int intNewBrassInstrumentId) {
-		this.brassInstrumentId = intNewBrassInstrumentId;
-	}
-
+	public void setBrassInstrumentId(int brassInstrumentId) {
+		this.brassInstrumentId = brassInstrumentId;
+	}	
+	
 }

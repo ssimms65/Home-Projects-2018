@@ -7,11 +7,11 @@ public class Woodwind extends Instruments {
 	private int woodwindInstrumentId;
 
 	// Overload constructors
-	public Woodwind(String strNewInstrumentGroup, String strNewInstrumentName, int intNewInstrumentId,
-			String strNewWoodwindInstrumentName, int intNewWoodwindInstrumentId) {
-		super(strNewInstrumentGroup, strNewInstrumentName, intNewInstrumentId);
-		this.woodwindInstrumentName = strNewWoodwindInstrumentName;
-		this.woodwindInstrumentId = intNewWoodwindInstrumentId;
+	public Woodwind(String newInstrumentGroup, String newInstrumentName, int newInstrumentId,
+			String newWoodwindInstrumentName, int newWoodwindInstrumentId) {
+		super(newInstrumentGroup, newInstrumentName, newInstrumentId);
+		this.woodwindInstrumentName = newWoodwindInstrumentName;
+		this.woodwindInstrumentId = newWoodwindInstrumentId;
 	}
 
 	// Display Class
@@ -23,22 +23,22 @@ public class Woodwind extends Instruments {
 
 	}
 
-	// Getters and setters for WoodwindInstrumentName
+	//Getters and setters
 	public String getWoodwindInstrumentName() {
 		return woodwindInstrumentName;
 	}
 
-	public void setWoodwindInstrumentName(String strNewWoodwindInstrumentName) {
-		this.woodwindInstrumentName = strNewWoodwindInstrumentName;
+	public void setWoodwindInstrumentName(String woodwindInstrumentName) {
+		this.woodwindInstrumentName = woodwindInstrumentName;
 	}
 
-	// Getters and setters for WoodwindInstrumentName
-	public int getIntWoodwindInstrumentId() {
+	public int getWoodwindInstrumentId() {
 		return woodwindInstrumentId;
 	}
 
-	public void setIntWoodwindInstrumentId(int intNewWoodwindInstrumentId) {
-		this.woodwindInstrumentId = intNewWoodwindInstrumentId;
+	public void setWoodwindInstrumentId(int woodwindInstrumentId) {
+		this.woodwindInstrumentId = woodwindInstrumentId;
 	}
+
 
 }

@@ -7,11 +7,11 @@ public class Percussion extends Instruments {
 	private int percussionInstrumentId;
 
 	// Overload constructors
-	public Percussion(String strNewInstrumentGroup, String strNewInstrumentName, int intNewInstrumentId,
-			String strNewPercussionInstrumentName, int intNewPercussionInstrumentId) {
-		super(strNewInstrumentGroup, strNewInstrumentName, intNewInstrumentId);
-		this.percussionInstrumentName = strNewPercussionInstrumentName;
-		this.percussionInstrumentId = intNewPercussionInstrumentId;
+	public Percussion(String newInstrumentGroup, String newInstrumentName, int newInstrumentId,
+			String newPercussionInstrumentName, int newPercussionInstrumentId) {
+		super(newInstrumentGroup, newInstrumentName, newInstrumentId);
+		this.percussionInstrumentName = newPercussionInstrumentName;
+		this.percussionInstrumentId = newPercussionInstrumentId;
 	}
 
 	// Display Class
@@ -23,22 +23,22 @@ public class Percussion extends Instruments {
 
 	}
 
-	// Getters and setters for PercussionInstrumentName
+	//Getters and setters
 	public String getPercussionInstrumentName() {
 		return percussionInstrumentName;
 	}
 
-	public void setPercussionInstrumentName(String strNewPercussionInstrumentName) {
-		this.percussionInstrumentName = strNewPercussionInstrumentName;
+	public void setPercussionInstrumentName(String percussionInstrumentName) {
+		this.percussionInstrumentName = percussionInstrumentName;
 	}
 
-	// Getters and setters for PercussionInstrumentId
-	public int getIntPercussionInstrumentId() {
+	public int getPercussionInstrumentId() {
 		return percussionInstrumentId;
 	}
 
-	public void setIntPercussionInstrumentId(int intNewPercussionInstrumentId) {
-		this.percussionInstrumentId = intNewPercussionInstrumentId;
+	public void setPercussionInstrumentId(int percussionInstrumentId) {
+		this.percussionInstrumentId = percussionInstrumentId;
 	}
 
+	
 }

@@ -38,7 +38,6 @@ public class WhaleWatcher {
 		System.out.println(whale.toString() + "");
 		}
 			
-			
 	}		
 }
 

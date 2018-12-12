@@ -3,15 +3,15 @@ package instrumentClasses;
 public class Musicians {
 
 	// Properties
-	public String musiciansName;
-	public String musiciansInstrument;
-	public int musiciansId;
+	private String musiciansName;
+	private String musiciansInstrument;
+	private int musiciansId;
  
 	// Overload Constructor
-	public Musicians(String strNewMusiciansName, String strNewMusiciansInstruments, int intNewMusiciansId) {
-		musiciansName = strNewMusiciansName;
-		musiciansInstrument = strNewMusiciansInstruments;
-		musiciansId = intNewMusiciansId;
+	public Musicians(String newMusiciansName, String newMusiciansInstruments, int newMusiciansId) {
+		musiciansName = newMusiciansName;
+		musiciansInstrument = newMusiciansInstruments;
+		musiciansId = newMusiciansId;
 	}
 
 	// Display Method
@@ -20,32 +20,32 @@ public class Musicians {
 		System.out.println("Musicians Instrument  : " + musiciansInstrument);
 		System.out.println("Musicians Id          : " + musiciansId);
 	}
-
-	// Getters and setters for MusiciansName
+	
+	
+	//Getters and setters
 	public String getMusiciansName() {
 		return musiciansName;
 	}
 
-	public void setMusiciansName(String strNewMusiciansName) {
-		this.musiciansName = strNewMusiciansName;
+	public void setMusiciansName(String musiciansName) {
+		this.musiciansName = musiciansName;
 	}
 
-	// Getters and setters for MusiciansInstrument
 	public String getMusiciansInstrument() {
 		return musiciansInstrument;
 	}
 
-	public void setMusiciansInstrument(String strNewMusiciansInstrument) {
-		this.musiciansInstrument = strNewMusiciansInstrument;
+	public void setMusiciansInstrument(String musiciansInstrument) {
+		this.musiciansInstrument = musiciansInstrument;
 	}
 
-	// Getters and setters for MusiciansName
 	public int getMusiciansId() {
 		return musiciansId;
 	}
 
-	public void setMusiciansId(int intNewMusiciansId) {
-		this.musiciansId = intNewMusiciansId;
+	public void setMusiciansId(int musiciansId) {
+		this.musiciansId = musiciansId;
 	}
+
 
 }
