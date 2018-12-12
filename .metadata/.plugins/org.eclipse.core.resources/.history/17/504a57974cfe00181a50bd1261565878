@@ -1,0 +1,53 @@
+package animalProject;
+
+import java.util.ArrayList;
+
+public class WhaleWatcher {
+
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		//Objects
+		Whale rightWhale 	= new Whale("Right Whale", "Atlantic", 2001, 21, 16);
+		Whale blueWhale 	= new Whale("Blue Whale", "Pacific", 2001, 23, 16);
+		Whale spermWhale 	= new Whale("Sperm Whale", "Atlantic", 1900, 20, 40);
+		Whale humpbackWhale = new Whale("Humbback Whale", "Antarctic", 919, 13, 13);
+
+		//Array
+		ArrayList<Whale> whales = new ArrayList<Whale>() {
+			{
+			add(rightWhale);
+			add(blueWhale);
+			add(spermWhale);
+			add(humpbackWhale);
+			}
+			}
+			;
+
+		//First Print
+//		System.out.println("\n\n--Whale Info--\n"); 
+//			printAllWhalesInfo(whales);
+//			
+//		System.out.println("\n\n--Whales that swim in the atlantic--\n");
+//			printWhalesByOcean(whales, "atlantic");
+//			
+//		System.out.println("\n\n--The fastest whale--\n");
+//			printWhalesByFastest(whales);
+//			
+//		System.out.println("\n\n--Statistics--\n");
+//		System.out.printf("The average length of the whales is %.2f meters \n", getAverageLength(whales));
+//			
+//		
+//		//Array - Heaviest whales
+//		ArrayList<Whale> heaviestWhales = getHeaviestWhales(whales);
+//			System.out.printf("The heaviest whales are: \n");
+//			for (Whale whale : heaviestWhales) {
+//				System.out.printf("\t%s at %d tonnes\n", whale.getName(), whale.getWeight());
+//			
+			}	
+			
+		
+	}
+

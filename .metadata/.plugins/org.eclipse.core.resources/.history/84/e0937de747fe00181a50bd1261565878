@@ -1,6 +1,6 @@
 package animalProject;
 
-public class Whale extends Animal {
+public class Whale {
 
 	
 	private String mainOcean;
@@ -9,26 +9,12 @@ public class Whale extends Animal {
 	private Integer length; //meters
 	
 	
-	public Whale() {
-		super();
-	}
-	
-	public Whale(String name, String mainOcean, int weight, int maxSpeed, int length) {
-		super(name);
-		this.mainOcean = mainOcean;
-		this.weight = weight;
-		this.maxSpeed = maxSpeed;
-		this.length = length;
-	}
-	
-	
-	@Override
 	public String toString() {
-		return "Whale [mainOcean=" + mainOcean + ", weight=" + weight + ", maxSpeed=" + maxSpeed + ", length=" + length
-				+ ", getMainOcean()=" + getMainOcean() + ", getWeight()=" + getWeight() + ", getMaxSpeed()="
-				+ getMaxSpeed() + ", getLength()=" + getLength() + ", getName()=" + getName() + ", getClass()="
-				+ getClass() + ", hashCode()=" + hashCode() + ", toString()=" + super.toString() + "]";
+		
+		return mainOcean.toString() + weight.toString() + maxSpeed.toString() + length.toString();
+		
 	}
+
 
 	public String getMainOcean() {
 		return mainOcean;
