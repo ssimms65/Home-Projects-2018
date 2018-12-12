@@ -1,0 +1,43 @@
+package instrumentClasses;
+
+public class Woodwind extends Instruments {
+
+	public String strWoodwindInstrumentName;
+	public int intWoodwindInstrumentId;
+
+	// Overload constructors
+	public Woodwind(String strNewInstrumentGroup, String strNewInstrumentName, int intNewInstrumentId, 
+			String strNewWoodwindInstrumentName, int intNewWoodwindInstrumentId) {
+		super(strNewInstrumentGroup, strNewInstrumentName, intNewInstrumentId);
+		this.strWoodwindInstrumentName = strNewWoodwindInstrumentName;
+		this.intWoodwindInstrumentId = intNewWoodwindInstrumentId;
+	}
+
+	// Display Class
+	public void Display_Class_Woodwind() {
+
+		super.Display_Class_Instruments();
+		System.out.println("Woodwind Instrument Name : " + strWoodwindInstrumentName);
+		System.out.println("Woodwind Instrument Id   : " + intWoodwindInstrumentId);
+
+	}
+
+	// Getters and setters for WoodwindInstrumentName
+	public String getStrWoodwindInstrumentName() {
+		return strWoodwindInstrumentName;
+	}
+
+	public void setStrWoodwindInstrumentName(String strNewWoodwindInstrumentName) {
+		this.strWoodwindInstrumentName = strNewWoodwindInstrumentName;
+	}
+
+	// Getters and setters for WoodwindInstrumentName
+	public int getIntWoodwindInstrumentId() {
+		return intWoodwindInstrumentId;
+	}
+
+	public void setIntWoodwindInstrumentId(int intNewWoodwindInstrumentId) {
+		this.intWoodwindInstrumentId = intNewWoodwindInstrumentId;
+	}
+
+}

@@ -1,0 +1,64 @@
+package instrumentClasses;
+
+public class Instruments {
+	
+		//Declare Instruments Class Attributes
+		public String strInstrumentCategory = "dftInstrumentCategory";
+		public String strInstrumentName = "dftInstrumentName";
+		public int intInstrumentId = 0;
+		
+		//Getters and setters for InstrumentCategory
+		public String getStrInstrumentCategory() {
+			return strInstrumentCategory;
+		}
+		public void setStrInstrumentCategory(String strNewInstrumentCategory) {
+			this.strInstrumentCategory = strNewInstrumentCategory;
+		}
+		
+		
+		//Getters and setters for InstrumentName
+		public String getStrInstrumentName() {
+			return strInstrumentName;
+		}
+		public void setStrInstrumentName(String strNewInstrumentName) {
+			this.strInstrumentName = strNewInstrumentName;
+		}
+		
+		//Getters and setters for InstrumentId
+		public int getIntInstrumentId() {
+			return intInstrumentId;
+		}
+		public void setIntInstrumentId(int intNewInstrumentId) {
+			this.intInstrumentId = intNewInstrumentId;
+		}
+		
+		//Default Constructor
+		public Class_Musicians() throws Exception
+		{
+						
+			strInstrumentCategory = "dftInstrumentCategory";
+			strInstrumentName = "dftInstrumentName";
+			intInstrumentId = 0;
+		}
+					
+		
+		//Overload Constructor
+		public Class_Musicians(String strNewInstrumentCategory, String strNewInstrumentName, int intNewInstrumentId) throws Exception 
+		{
+			strInstrumentCategory = strNewInstrumentCategory;
+			strInstrumentName = strNewInstrumentName;
+			intInstrumentId = intNewInstrumentId;
+		}
+
+		//Display Method
+		public void Display_Class_Musicians()
+		{
+			System.out.println("Instruments Category        : " + strInstrumentCategory);
+			System.out.println("Instruments Name  : " + strInstrumentName);
+			System.out.println("Instruments Id         : " + intInstrumentId);
+		}
+
+		
+	}
+
+

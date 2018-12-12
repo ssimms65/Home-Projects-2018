@@ -1,0 +1,15 @@
+package animalProject;
+
+public class Whale {
+
+	
+	private String mainOcean;
+	private Integer weight; //tonnes
+	private Integer maxSpeed;
+	private Integer length; //meters
+	
+	
+	
+	
+
+}

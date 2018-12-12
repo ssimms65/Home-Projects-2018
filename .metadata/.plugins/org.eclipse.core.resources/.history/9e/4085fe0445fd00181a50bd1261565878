@@ -1,0 +1,52 @@
+package instrumentClasses;
+
+public class Strings extends Instruments {
+
+	public String strStringsInstrumentName = "dftStringsInstrumentName";
+	public int intStringsInstrumentId = 0;
+	
+	
+	//Getters and setters for StringsInstrumentName
+	public String getStrStringsInstrumentName() {
+		return strStringsInstrumentName;
+	}
+	public void setStrStringsInstrumentName(String strNewStringsInstrumentName) {
+		this.strStringsInstrumentName = strNewStringsInstrumentName;
+	}
+	
+	//Getters and setters for StringsInstrumentName
+	public int getIntStringsInstrumentId() {
+		return intStringsInstrumentId;
+	}
+	public void setIntStringInstrumentId(int intNewStringsInstrumentId) {
+		this.intStringsInstrumentId = intNewStringsInstrumentId;
+	}
+	
+	
+	//Default constructors
+	public Strings() {
+		super();
+		strStringsInstrumentName = "dftStringsInstrumentName";
+		intStringsInstrumentId = 0;
+	}
+	
+	
+	//Overload constructors????????
+	public Strings(String strNewStringsInstrumentName, int intNewStringsInstrumentId) {
+		super();
+		this.strStringsInstrumentName = strNewStringsInstrumentName;
+		this.intStringsInstrumentId = intNewStringsInstrumentId;
+	}
+
+	// Display Class
+	public void Display_Class_Strings() {
+
+		super.Display_Class_Instruments();
+		System.out.println("Strings Instrument Name : " + strStringsInstrumentName);
+		System.out.println("Strings Instrument Id   : " + intStringsInstrumentId);
+
+	}
+
+}
+
+

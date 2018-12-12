@@ -1,0 +1,15 @@
+package instrumentClasses;
+
+public class Instruments {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		//Declare Instruments Class Attributes
+		public String strInstrumentCategory = "dftInstrumentCategory";
+		public String strInstrumentName = "dftInstrumentName";
+		public int intInstrumentId = 0;		
+
+	}
+
+}

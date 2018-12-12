@@ -1,0 +1,503 @@
+
+public interface ProjectInterface {
+	
+	import java.util.*;
+
+	import Project_Classes.Class_Customer;
+	import Project_Classes.Class_HouseForSale;
+	import Project_Classes.Class_HousesForRent;
+
+	/**
+	 * @author COE11185796
+	 * @category Assessment_2_Class_UserInterface
+	 */
+
+	public class Class_UserInterface 
+	{
+
+		private static final int ArraySize = 100;
+		static int intRecordCount = 0;
+		static int intRecordCountRent = 0;
+
+		static Class_Customer CustomerList[] = new Class_Customer[ArraySize];
+		static Class_Customer CustomerListRent[] = new Class_Customer[ArraySize];
+		
+		static Class_HouseForSale HouseForSale[] = new Class_HouseForSale[ArraySize];
+		static Class_HousesForRent HouseForRent[] = new Class_HousesForRent[ArraySize];
+		
+		
+		public static void main(String[] args) 
+		{
+			mainMenu();
+		}
+		
+		@SuppressWarnings("resource")
+		static void mainMenu()
+		{
+			//Variables
+			int intMenuChoice = 0;
+			Scanner sc = new Scanner(System.in);
+			
+			do
+			{
+				System.out.println("====================================");
+				System.out.println("\t     Main Menu");
+				System.out.println("====================================");
+				System.out.println("1. Add House For Sale");
+				System.out.println("2. Add House For Rent");
+				System.out.println("3. Search House For Sale Details");
+				System.out.println("4. Search House For Rent Details");
+				System.out.println("5. Exit Program");
+				System.out.println("Please select an option: (1-5) ");
+				intMenuChoice = Integer.parseInt(sc.next());
+				
+				if (intMenuChoice == 1)
+				{
+					if (intRecordCount < ArraySize)
+					{
+						System.out.println("\n\n\nNow accepting House For Sale details.");
+						try 
+						{
+							AcceptHouseForSaleDetails();
+						} 
+						catch (Exception e) 
+						{
+							e.printStackTrace();
+						}
+					}
+					else
+					{
+						System.out.println("\n\n\nError - No Room For Additional Records, Array List Full");
+					}
+				}
+				else if (intMenuChoice == 2)
+				{
+					if (intRecordCount < ArraySize)
+					{
+						System.out.println("\n\n\nNow accepting House For Rent details.");
+						try 
+						{
+							AcceptHouseForRentDetails();
+						} 
+						catch (Exception e) 
+						{
+							e.printStackTrace();
+						}
+					} 
+					else
+					{
+						System.out.println("\n\n\nError - No Room For Additional Records, Array List Full");
+					}
+				}
+				else if (intMenuChoice == 3)
+				{
+
+						try 
+						{
+							HouseSearchHouseForSale();
+						} 
+						catch (Exception e) 
+						{
+							e.printStackTrace();
+						}
+					
+				}
+				else if (intMenuChoice == 4)
+				{
+					
+					try 
+					{
+						HouseSearchHouseForRent();
+					} 
+					catch (Exception e) 
+					{
+						e.printStackTrace();
+					}
+					
+				}
+				else if (intMenuChoice == 5)
+				{
+					System.out.println("Now Exiting Program");
+					System.exit(0);
+				}
+				else
+				{
+					System.out.println("Invalid Choice - Please choose a option (1-5)");
+				}
+			}while (intMenuChoice != 5);
+		}
+		
+		
+
+		static void AcceptHouseForSaleDetails() throws Exception
+		{
+			//Attributes For House & House For Sale
+			String strTempHouseReference = "dftHouseReference";
+			String strTempHouseLoaction = "dftHouseLocation";
+			String strTempHouseType = "dftHouseType";
+			int intTempNumberOfBedrooms = 0;
+			int intTempNumberOfReceptionRooms = 0;
+			boolean blnTempGarage = false;
+			String strTempCustomerReference = "dftCustomerReference";
+			double dblTempHousePrice = 0.00;
+			String strTempHouseStatus = "dftHouseStatus";
+			
+			//Attributes To Allow Garage Input
+			String strGarage = "dftGarage";
+			String strStatus = "dftStatus";
+			
+			//Attributes For Customer
+			String strTempCustomerNumber = "dftCustomerNumber";
+			String strTempCustomerFirstName = "dftCustomerFirstName";
+			String strTempCustomerLastName = "dftCustomerLastName";
+			String strTempCustomerAddress = "dftCustomerAddress";
+			int intTempCustomerPhoneNumber = 0;
+			String strTempCustomerEmail = "dftCustomerEmail";
+			int intTempCustomerFax = 0;
+				
+			@SuppressWarnings("resource")
+			Scanner sc = new Scanner(System.in);
+			
+			try
+			{
+				//Accept Information
+				System.out.println("Enter House Reference: (E.g R0001)");
+				strTempHouseReference = sc.nextLine();
+				
+				System.out.println("Enter House Location:");
+				strTempHouseLoaction = sc.nextLine();
+				
+				System.out.println("Enter House Type:");
+				strTempHouseType = sc.nextLine();
+				
+				System.out.println("Enter Number Of Bedrooms:");
+				intTempNumberOfBedrooms = Integer.parseInt(sc.nextLine());
+				
+				System.out.println("Enter Number Of Reception Rooms:");
+				intTempNumberOfReceptionRooms = Integer.parseInt(sc.nextLine());
+				
+				System.out.println("Does house have a garage?(Yes/No): ");
+				strGarage = sc.nextLine();
+				if(strGarage.toLowerCase().startsWith("y"))
+				{
+					blnTempGarage = true;
+				}
+				else if(strGarage.toLowerCase().startsWith("n"))
+				{
+					blnTempGarage = false;
+				}
+				else
+				{
+					System.out.println("ERROR: Invalid Value");
+				}
+				
+				System.out.println("Enter Customer Reference: (E.g C0001");
+				strTempCustomerReference = sc.nextLine();
+				
+				System.out.println("Enter House Price:");
+				dblTempHousePrice = Double.parseDouble(sc.nextLine());
+				
+				System.out.println("Enter house status (Sold/Under Offer/For Sale): ");
+				strStatus = sc.nextLine();
+				if(strStatus.toLowerCase().startsWith("s"))
+				{
+					strTempHouseStatus = "Sold";
+				}
+				else if(strStatus.toLowerCase().startsWith("u"))
+				{
+					strTempHouseStatus = "Under Offer";
+				}
+				else if(strStatus.toLowerCase().startsWith("f"))
+				{
+					strTempHouseStatus = "For Sale";
+				}
+				else
+				{
+					System.out.println("ERROR: Invalid Value");
+				}
+				
+				System.out.println("Enter Customer Number:");
+				strTempCustomerNumber = sc.nextLine();
+				
+				System.out.println("Enter Customer First Name:");
+				strTempCustomerFirstName = sc.nextLine();
+				
+				System.out.println("Enter Customer Last Name:");
+				strTempCustomerLastName = sc.nextLine();
+				
+				System.out.println("Enter Customer Address:");
+				strTempCustomerAddress = sc.nextLine();
+				
+				System.out.println("Enter Customer Phone Number:");
+				intTempCustomerPhoneNumber = Integer.parseInt(sc.nextLine());
+				
+				System.out.println("Enter Customer Email:");
+				strTempCustomerEmail = sc.nextLine();
+				
+				System.out.println("Enter Customer Fax Number:");
+				intTempCustomerFax = Integer.parseInt(sc.nextLine());
+				
+				
+				Class_HouseForSale hfs1 = new Class_HouseForSale(strTempHouseReference, strTempHouseLoaction, strTempHouseType, intTempNumberOfBedrooms, intTempNumberOfReceptionRooms, blnTempGarage, strTempCustomerReference, dblTempHousePrice, strTempHouseStatus);
+	            HouseForSale[intRecordCount] = hfs1;
+				
+	            
+				Class_Customer c1 = new Class_Customer(strTempCustomerNumber, strTempCustomerFirstName, strTempCustomerLastName, strTempCustomerAddress, intTempCustomerPhoneNumber, strTempCustomerEmail, intTempCustomerFax);
+				CustomerList[intRecordCount] = c1;
+				
+				intRecordCount++;
+				
+				System.out.println("Information Accepted, returning to main menu.");
+			}
+			catch (Exception ex)
+			{
+				System.out.println("Error: " +ex.getMessage());
+			}
+			finally
+			{
+				System.out.println("Information Has Been Accepted");
+			}
+		}
+		
+		static void AcceptHouseForRentDetails() throws Exception
+		{
+			//Attributes For House & House For Sale
+			String strTempHouseReference = "dftHouseReference";
+			String strTempHouseLoaction = "dftHouseLocation";
+			String strTempHouseType = "dftHouseType";
+			int intTempNumberOfBedrooms = 0;
+			int intTempNumberOfReceptionRooms = 0;
+			boolean blnTempGarage = false;
+			String strTempCustomerReference = "dftCustomerReference";
+			double dblTempHouseRent = 0.00;
+			int intTempHouseLeaseLength = 0;
+			String strTempHouseStatus = "dftHouseStatus";
+			
+			//Attributes To Allow Garage Input
+			String strGarage = "dftGarage";
+			String strStatus = "dftStatus";
+			
+			//Attributes For Customer
+			String strTempCustomerNumber = "dftCustomerNumber";
+			String strTempCustomerFirstName = "dftCustomerFirstName";
+			String strTempCustomerLastName = "dftCustomerLastName";
+			String strTempCustomerAddress = "dftCustomerAddress";
+			int intTempCustomerPhoneNumber = 0;
+			String strTempCustomerEmail = "dftCustomerEmail";
+			int intTempCustomerFax = 0;
+					
+			@SuppressWarnings("resource")
+			Scanner sc = new Scanner(System.in);
+
+			try
+			{
+				//Accept Information
+				System.out.println("Enter House Reference: (E.g R0001");
+				strTempHouseReference = sc.nextLine();
+				
+				System.out.println("Enter House Location:");
+				strTempHouseLoaction = sc.nextLine();
+				
+				System.out.println("Enter House Type:");
+				strTempHouseType = sc.nextLine();
+				
+				System.out.println("Enter Number Of Bedrooms:");
+				intTempNumberOfBedrooms = Integer.parseInt(sc.nextLine());
+				
+				System.out.println("Enter Number Of Reception Rooms:");
+				intTempNumberOfReceptionRooms = Integer.parseInt(sc.nextLine());
+				
+				System.out.println("Does house have a garage?(Yes/No): ");
+				strGarage = sc.nextLine();
+				if(strGarage.toLowerCase().startsWith("y"))
+				{
+					blnTempGarage = true;
+				}
+				else if(strGarage.toLowerCase().startsWith("n"))
+				{
+					blnTempGarage = false;
+				}
+				else
+				{
+					System.out.println("ERROR: Invalid Value");
+				}
+				
+				System.out.println("Enter Customer Reference: (E.g C0001)");
+				strTempCustomerReference = sc.nextLine();
+				
+				System.out.println("Enter House Rent (Per Month E.g 400.00):");
+				dblTempHouseRent = Double.parseDouble(sc.nextLine());
+				
+				System.out.println("Enter House Lease Length: (In months E.g 1)");
+				intTempHouseLeaseLength = Integer.parseInt(sc.nextLine());
+				
+				System.out.println("Enter house status (E.g Available/Occupied/Unconfirmed): ");
+				strStatus = sc.nextLine();
+				if(strStatus.toLowerCase().startsWith("a"))
+				{
+					strTempHouseStatus = "Available";
+				}
+				else if(strStatus.toLowerCase().startsWith("o"))
+				{
+					strTempHouseStatus = "Occupied";
+				}
+				else if(strStatus.toLowerCase().startsWith("u"))
+				{
+					strTempHouseStatus = "Unconfirmed";
+				}
+				else
+				{
+					System.out.println("ERROR: Invalid Value");
+				}
+				
+				System.out.println("Enter Customer Number:");
+				strTempCustomerNumber = sc.nextLine();
+				
+				System.out.println("Enter Customer First Name:");
+				strTempCustomerFirstName = sc.nextLine();
+				
+				System.out.println("Enter Customer Last Name:");
+				strTempCustomerLastName = sc.nextLine();
+				
+				System.out.println("Enter Customer Address:");
+				strTempCustomerAddress = sc.nextLine();
+				
+				System.out.println("Enter Customer Phone Number:");
+				intTempCustomerPhoneNumber = Integer.parseInt(sc.nextLine());
+				
+				System.out.println("Enter Customer Email:");
+				strTempCustomerEmail = sc.nextLine();
+				
+				System.out.println("Enter Customer Fax Number:");
+				intTempCustomerFax = Integer.parseInt(sc.nextLine());
+				
+				
+				Class_HousesForRent hfr1 = new Class_HousesForRent(strTempHouseReference, strTempHouseLoaction, strTempHouseType, intTempNumberOfBedrooms, intTempNumberOfReceptionRooms, blnTempGarage, strTempCustomerReference, dblTempHouseRent, intTempHouseLeaseLength, strTempHouseStatus);
+	            HouseForRent[intRecordCountRent] = hfr1;
+				
+	            
+				Class_Customer c1 = new Class_Customer(strTempCustomerNumber, strTempCustomerFirstName, strTempCustomerLastName, strTempCustomerAddress, intTempCustomerPhoneNumber, strTempCustomerEmail, intTempCustomerFax);
+				CustomerListRent[intRecordCountRent] = c1;
+				
+				intRecordCountRent++;
+				
+				System.out.println("Information Accepted, returning to main menu.");
+			}
+			catch (Exception ex)
+			{
+				System.out.println("Error: " +ex.getMessage());
+			}
+			finally
+			{
+				System.out.println("Information Has Been Accepted");
+			}
+			
+			
+		}
+		
+		
+		static void HouseSearchHouseForSale() throws Exception
+		{
+			
+			String HouseSearchID = "";
+			Class_HouseForSale data1 = null;
+			Class_Customer data2 = null;
+			Scanner sc = new Scanner(System.in);
+			
+			try
+			{
+				System.out.println("Enter House Reference");
+				HouseSearchID = sc.nextLine();
+				
+				outerfor:
+				for (int intLoopCounter = 0; intLoopCounter < intRecordCount; intLoopCounter++)
+				{
+					if (HouseSearchID.equalsIgnoreCase(HouseForSale[intLoopCounter].getHouseReference() ))
+					{
+						data1 = HouseForSale[intLoopCounter];
+						data2 = CustomerList[intLoopCounter];
+						break outerfor;
+					}
+				}
+				if (data1 == null)
+				{
+					System.out.println("No Match Found");
+				}
+				else
+				{
+					System.out.println("");
+					System.out.println("=====================");
+					System.out.println("    Matched Record   ");
+					System.out.println("=====================");
+					data1.Display_Class_HouseForSale();
+					data2.Display_Class_Customer();
+					System.out.println("");
+					System.out.println("=====================");
+					System.out.println("Returning To Main Menu");
+				}
+			}
+			catch(Exception ex)
+			{
+				System.out.println("Error: " + ex.getMessage());
+			}
+			finally
+			{
+				
+			}
+		}
+			static void HouseSearchHouseForRent() throws Exception
+			{
+				
+				String HouseSearchID = "";
+				Class_HousesForRent data1 = null;
+				Class_Customer data2 = null;
+				Scanner sc = new Scanner(System.in);
+				
+				try
+				{
+					System.out.println("Enter House Reference");
+					HouseSearchID = sc.nextLine();
+					
+					outerfor:
+					for (int intLoopCounter = 0; intLoopCounter < intRecordCountRent; intLoopCounter++)
+					{
+						if (HouseSearchID.equalsIgnoreCase(HouseForRent[intLoopCounter].getHouseReference() ))
+						{
+							data1 = HouseForRent[intLoopCounter];
+							data2 = CustomerListRent[intLoopCounter];
+							break outerfor;
+						}
+					}
+					if (data1 == null)
+					{
+						System.out.println("No Match Found");
+					}
+					else
+					{
+						System.out.println("");
+						System.out.println("=====================");
+						System.out.println("    Matched Record   ");
+						System.out.println("=====================");
+						data1.Display_Class_HouseForRent();
+						data2.Display_Class_Customer();
+						System.out.println("");
+						System.out.println("=====================");
+						System.out.println("Returning To Main Menu");
+					}
+				}
+				catch(Exception ex)
+				{
+					System.out.println("Error: " + ex.getMessage());
+				}
+				finally
+				{
+					
+				}
+		}
+		
+		
+
+	
+	
+
+}

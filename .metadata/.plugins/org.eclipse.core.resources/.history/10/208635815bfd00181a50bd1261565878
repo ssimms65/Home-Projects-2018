@@ -1,0 +1,60 @@
+package instrumentClasses;
+
+public class Instruments {
+
+	// Declare Instruments Class Attributes
+	public String instrumentGroup;
+	public String instrumentName;
+	public int intInstrumentId;
+
+	// Getters and setters for InstrumentGroup
+	public String getStrInstrumentGroup() {
+		return instrumentGroup;
+	}
+
+	public void setStrInstrumentGroup(String strNewInstrumentGroup) {
+		this.instrumentGroup = strNewInstrumentGroup;
+	}
+
+	// Getters and setters for InstrumentName
+	public String getStrInstrumentName() {
+		return instrumentName;
+	}
+
+	public void setStrInstrumentName(String strNewInstrumentName) {
+		this.instrumentName = strNewInstrumentName;
+	}
+
+	// Getters and setters for InstrumentId
+	public int getIntInstrumentId() {
+		return intInstrumentId;
+	}
+
+	public void setIntInstrumentId(int intNewInstrumentId) {
+		this.intInstrumentId = intNewInstrumentId;
+	}
+
+	// Default Constructor
+	public Instruments() {
+
+		instrumentGroup = "dftInstrumentGroup";
+		instrumentName = "dftInstrumentName";
+		intInstrumentId = 0;
+	}
+
+	// Overload Constructor
+	public Instruments(String strNewInstrumentGroup, String strNewInstrumentName, 
+			int intNewInstrumentId) {
+		instrumentGroup = strNewInstrumentGroup;
+		instrumentName = strNewInstrumentName;
+		intInstrumentId = intNewInstrumentId;
+	}
+
+	// Display Method
+	public void Display_Class_Instruments() {
+		System.out.println("Instruments Group  : " + instrumentGroup);
+		System.out.println("Instruments Name   : " + instrumentName);
+		System.out.println("Instruments Id     : " + intInstrumentId);
+	}
+
+}

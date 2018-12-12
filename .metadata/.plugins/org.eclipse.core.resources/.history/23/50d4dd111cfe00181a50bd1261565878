@@ -1,0 +1,162 @@
+package Project_Classes;
+
+/**
+ * @author COE11185796
+ * @category Assesment_2_Class_Customer
+ */
+
+public class Class_Customer 
+{
+	
+	//*- Start Of Declaring Customer Class Attributes -*\\
+	public String strCustomerNumber = "dftCustomerNumber";
+	public String strCustomerFirstName = "dftCustomerFirstName";
+	public String strCustomerLastName = "dftCustomerLastName";
+	public String strCustomerAddress = "dftCustomerAddress";
+	public int intCustomerPhoneNumber = 0;
+	public String strCustomerEmail = "dftCustomerEmail";
+	public int intCustomerFax = 0;
+	//*- End Of Declaring Customer Class Attributes -*\\
+	
+	
+	//*- Start Of Get / Set For Attributes *\\
+	
+		// Get / Set For Customer Number \\
+		public String getCustomerNumber ()
+		{
+			return strCustomerNumber;
+		}
+		
+		public void setCustomerNumber (String strNewCustomerNumber)
+		{
+			strCustomerNumber = strNewCustomerNumber;
+		}
+		// End Of Get / Set For Customer Number \\
+		
+		
+		// Get / Set For Customer First Name \\
+		public String getCustomerFirstName ()
+		{
+			return strCustomerFirstName;
+		}
+		
+		public void setCustomerFirstName (String strNewCustomerFirstName)
+		{
+			strCustomerFirstName = strNewCustomerFirstName;
+		}
+		// End Of Get / Set For Customer First Name \\
+		
+		
+		// Get / Set For Customer Last Name \\
+		public String getCustomerLastName ()
+		{
+			return strCustomerLastName;
+		}
+		
+		public void setCustomerLastName(String strNewCustomerLastName)
+		{
+			strCustomerLastName = strNewCustomerLastName;
+		}
+		// End Of Get / Set For Customer Last Name \\
+		
+		
+		// Get / Set For Customer Address \\
+		public String getCustomerAddress ()
+		{
+			return strCustomerAddress;
+		}
+		
+		public void setCustomerAddress(String strNewCustomerAddress)
+		{
+			strCustomerAddress = strNewCustomerAddress;
+		}
+		// End Of Get / Set For Customer Address \\
+		
+		
+		// Get / Set For Customer Phone Number \\
+		public int getCustomerPhoneNumber()
+		{
+			return intCustomerPhoneNumber;
+		}
+		
+		public void setCustomerPhoneNumber (int intNewCustomerPhoneNumber)
+		{
+			intCustomerPhoneNumber = intNewCustomerPhoneNumber;
+		}
+		// End Of Get / Set For Customer Phone Number \\
+		
+		
+		// Get / Set For Customer Email \\
+		public String getCustomerEmail ()
+		{
+			return strCustomerEmail;
+		}
+		
+		public void setCustomerEmail(String strNewCustomerEmail)
+		{
+			strCustomerEmail = strNewCustomerEmail;
+		}
+		// End Of Get / Set For Customer Email \\
+		
+		
+		// Get / Set For Customer Fax \\
+		public int getCustomerFax()
+		{
+			return intCustomerFax;
+		}
+		
+		public void setCustomerFax (int intNewCustomerFax)
+		{
+			intCustomerFax = intNewCustomerFax;
+		}
+		// End Of Get / Set For Customer Fax \\
+		
+	//*- End Of Get / Set For Attributes *\\
+		
+		
+	//*- Start Of Default Constructor & Overload Constructor -*\\
+		
+		// Default Constructor \\
+		public Class_Customer() throws Exception
+		{
+			strCustomerNumber = "dftCustomerNumber";
+			strCustomerFirstName = "dftCustomerFirstName";
+			strCustomerLastName = "dftCustomerLastName";
+			strCustomerAddress = "dftCustomerAddress";
+			intCustomerPhoneNumber = 0;
+			strCustomerEmail = "dftCustomerEmail";
+			intCustomerFax = 0;
+		}
+		// End Of Default Constructor \\
+		
+		
+		// Overload Constructor \\
+		public Class_Customer(String strNewCustomerNumber, String strNewCustomerFirstName, String strNewCustomerLastName, String strNewCustomerAddress, int intNewCustomerPhoneNumber, String strNewCustomerEmail, int intNewCustomerFax) throws Exception 
+		{
+			strCustomerNumber = strNewCustomerNumber;
+			strCustomerFirstName = strNewCustomerFirstName;
+			strCustomerLastName = strNewCustomerLastName;
+			strCustomerAddress = strNewCustomerAddress;
+			intCustomerPhoneNumber = intNewCustomerPhoneNumber;
+			strCustomerEmail = strNewCustomerEmail;
+			intCustomerFax = intNewCustomerFax;
+		}
+		// End Of Overload Constructor \\
+		
+	//*- End Of Default Constructor & Overload Constructor -*\\
+		
+		
+	//*- Start Of Display Method -*\\
+		
+		public void Display_Class_Customer()
+		{
+			System.out.println("Customer Number        : " + strCustomerNumber);
+			System.out.println("Customer First Name    : " + strCustomerFirstName);
+			System.out.println("Customer Last Name     : " + strCustomerLastName);
+			System.out.println("Customer Address       : " + strCustomerAddress);
+			System.out.println("Customer Phone Number  : " + intCustomerPhoneNumber);
+			System.out.println("Customer Email         : " + strCustomerEmail);
+			System.out.println("Customer Fax           : " + intCustomerFax);
+		}
+}	
+	//*- End Of Display Method -*\\

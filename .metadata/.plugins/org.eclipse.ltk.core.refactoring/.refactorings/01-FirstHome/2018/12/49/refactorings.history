@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;firstHome.Controller&apos; to &apos;firstHome.controller&apos;&#x0A;- Original project: &apos;01-FirstHome&apos;&#x0A;- Original element: &apos;01-FirstHome/src/firstHome.Controller&apos;&#x0A;- Renamed element: &apos;01-FirstHome/src/firstHome.controller&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;firstHome.Controller&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;firstHome.Controller" name="firstHome.controller" qualified="false" references="true" stamp="1544379443285" textual="false" version="1.0"/>
+</session>

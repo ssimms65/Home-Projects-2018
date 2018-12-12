@@ -1,0 +1,23 @@
+package instrumentClasses;
+
+public class Musicians {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		//Declare class attributes
+		public String strMusiciansName = "dftMusiciansName";
+		public String strMusiciansInstrument = "dftMusiciansInstrument";
+		public int intMusiciansId = 0;
+		
+		
+		//Getters and setters
+		
+		
+		
+		
+		
+		
+	}
+
+}

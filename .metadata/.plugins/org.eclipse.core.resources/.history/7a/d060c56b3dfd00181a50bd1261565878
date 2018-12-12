@@ -1,0 +1,54 @@
+package instrumentClasses;
+
+public class Brass extends Instruments {
+
+	
+	public String strBrassInstrumentName = "dftBrassInstrumentName";
+	public int intBrassInstrumentId = 0;
+	
+	
+	//Getters and setters for BrassInstrumentName
+	public String getStrBrassInstrumentName() {
+		return strBrassInstrumentName;
+	}
+	public void setStrBrassInstrumentName(String strNewBrassInstrumentName) {
+		this.strBrassInstrumentName = strNewBrassInstrumentName;
+	}
+	
+	//Getters and setters for BrassInstrumentId
+	public int getIntBrassInstrumentId() {
+		return intBrassInstrumentId;
+	}
+	public void setIntBrassInstrumentId(int intNewBrassInstrumentId) {
+		this.intBrassInstrumentId = intNewBrassInstrumentId;
+	}
+	
+	//Default constructors
+	public Brass() {
+		super();
+		strBrassInstrumentName = "dftBrassInstrumentName";
+		intBrassInstrumentId = 0;
+	}
+	
+	//Overload constructors????????
+	public Brass(String strBrassInstrumentName, int intBrassInstrumentId) {
+		super();
+		this.strBrassInstrumentName = strBrassInstrumentName;
+		this.intBrassInstrumentId = intBrassInstrumentId;
+	}
+	
+	
+	
+	//Display Class
+	public void Display_Class_Brass()
+	{
+		
+		super.Display_Class_Instruments();
+		System.out.println("Customer reference : " + strBrassInstrumentName);
+		System.out.println("House Price        : " + intBrassInstrumentId);
+
+	}
+	
+}
+
+

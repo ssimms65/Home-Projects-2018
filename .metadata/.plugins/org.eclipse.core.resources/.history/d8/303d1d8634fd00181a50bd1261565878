@@ -1,0 +1,12 @@
+package instrumentClasses;
+
+public class Instruments {
+	
+		//Declare Instruments Class Attributes
+		public String strInstrumentCategory = "dftInstrumentCategory";
+		public String strInstrumentName = "dftInstrumentName";
+		public int intInstrumentId = 0;		
+
+	}
+
+}

@@ -1,0 +1,117 @@
+package Project_Classes;
+
+/**
+ * @author COE11185796
+ * @category Assesment_2_Class_HouseForSale
+ */
+
+public class Class_HousesForRent extends Class_House 
+{
+
+	//*- Start Of Declaring House For Sale Class Attributes -*\\
+		public String strCustomerReference = "dftCustomerReference";
+		public double dblHouseRentPerMonth = 0.00;
+		public int intHouseLeaseLength = 0;
+		public String strHouseStatus = "dftHouseStatus";
+		//*- End Of Declaring House For Sale Class Attributes -*\\
+		
+		
+		//*- Start Of Get / Set For Attributes *\\
+		
+				// Get / Set For Customer Reference \\
+				public String getCustomerReference ()
+				{
+					return strCustomerReference;
+				}
+				
+				public void setCustomerReference (String strNewCustomerReference)
+				{
+					strCustomerReference = strNewCustomerReference;
+				}
+				// End Of Get / Set For Customer Reference \\
+				
+				// Get / Set For House Rent Per Month \\
+				public double getHouseRentPerMonth ()
+				{
+					return dblHouseRentPerMonth;
+				}
+				
+				public void setHouseRentPerMonth (double dblNewHouseRentPerMonth)
+				{
+					dblHouseRentPerMonth = dblNewHouseRentPerMonth;
+				}
+				// End Of Get / Set For House Rent Per Month \\
+				
+				// Get / Set For House Lease Length \\
+				public int getHouseLeaseLength ()
+				{
+					return intHouseLeaseLength;
+				}
+				
+				public void setHouseLeaseLength (int intNewHouseLeaseLength)
+				{
+					intHouseLeaseLength = intNewHouseLeaseLength;
+				}
+				// End Of Get / Set For House Lease Length \\
+				
+				
+				// Get / Set For House Status \\
+				public String getHouseStatus ()
+				{
+					return strHouseStatus;
+				}
+				
+				public void setHouseStatus (String strNewHouseStatus)
+				{
+					strHouseStatus = strNewHouseStatus;
+				}
+				// End Of Get / Set For House Status \\
+				
+				
+		//*- End Of Get / Set For Attributes *\\
+				
+				
+		//*- Start Of Default Constructor & Overload Constructor -*\\
+				
+			// Default Constructor \\	
+			public Class_HousesForRent() throws Exception
+			{
+				super();
+				strCustomerReference = "dftCustomerReference";
+				dblHouseRentPerMonth = 0.00;
+				intHouseLeaseLength = 0;
+				strHouseStatus = "dftHouseStatus";		
+			}
+			// End Of Default Constructor \\
+			
+			
+			// Overload Constructor \\	
+			public Class_HousesForRent(String strNewHouseReference, String strNewHouseLocation, String strNewHouseType, int intNewNumberOfBedrooms, int intNewNumberOfReceptionRooms, boolean blnNewGarage, String strNewCustomerReference, double dblNewHouseRentPerMonth, int intNewHouseLeaseLength, String strNewHouseStatus) throws Exception
+			{
+				super(strNewHouseReference, strNewHouseLocation, strNewHouseType, intNewNumberOfBedrooms, intNewNumberOfReceptionRooms, blnNewGarage);
+				strCustomerReference = strNewCustomerReference;
+				dblHouseRentPerMonth = dblNewHouseRentPerMonth;
+				intHouseLeaseLength = intNewHouseLeaseLength;
+				strHouseStatus = strNewHouseStatus;
+			}
+			// End Of Overload Constructor \\
+			
+		//*- End Of Default Constructor & Overload Constructor -*\\
+			
+			
+		//*- Start Of Display Method -*\\
+			
+				public void Display_Class_HouseForRent()
+				{
+					
+					super.Display_Class_House();
+					System.out.println("Customer reference   : " + strCustomerReference);
+					System.out.println("House Rent Per Month : " + dblHouseRentPerMonth);
+					System.out.println("House Lease length   : " + intHouseLeaseLength);
+					System.out.println("House Status         : " + strHouseStatus);
+
+				}
+					
+		//*- End Of Display Method -*\\	
+	
+}

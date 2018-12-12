@@ -1,0 +1,76 @@
+package instrumentClasses;
+
+public class Musicians {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		//Declare class attributes
+		public String strMusiciansName = "dftMusiciansName";
+		public String strMusiciansInstrument = "dftMusiciansInstrument";
+		public int intMusiciansId = 0;
+		
+		
+		//Getters and setters for MusiciansName
+		public String getMusiciansName ()
+		{
+			return strMusiciansName;
+		}
+		
+		public void setMusiciansName (String strNewMusiciansName)
+		{
+			strMusiciansName = strNewMusiciansName;
+		}
+		
+		//Getters and setters for MusiciansInstrument
+		public String getMusiciansInstrument ()
+		{
+			return strMusiciansInstrument;
+		}
+		
+		public void setMusiciansInstrument (String strNewMusiciansInstrument)
+		{
+			strMusiciansInstrument = strNewMusiciansInstrument;
+		}
+		
+		//Getters and setters for MusiciansName
+		public int getMusiciansId()
+		{
+			return intMusiciansId;
+		}
+		
+		public void setMusiciansId (int intNewMusiciansId)
+		{
+			intMusiciansId  = intNewMusiciansId ;
+		}
+		
+		
+		//Default Constructor
+		public Class_Musicians() throws Exception
+		{
+						
+			strMusiciansName = "dftMusiciansName";
+			strMusiciansInstrument = "dftMusiciansInstrument";
+			intMusiciansId = 0;
+		}
+					
+		
+		//Overload Constructor
+		public Class_Musicians(String strNewCustomerNumber, String strNewCustomerFirstName, String strNewCustomerLastName, String strNewCustomerAddress, int intNewCustomerPhoneNumber, String strNewCustomerEmail, int intNewCustomerFax) throws Exception 
+		{
+			strMusiciansName = strNewMusiciansName;
+			strMusiciansInstrument = strNewMusiciansInstruments;
+			intMusiciansId = intNewMusiciansId;
+		}
+
+		//Start Of Display Method
+		public void Display_Class_Musicians()
+		{
+			System.out.println("Musicians Name        : " + strMusiciansName);
+			System.out.println("Musicians Instrument  : " + strMusiciansInstrument);
+			System.out.println("Musicians Id          : " + intMusiciansId);
+		}
+					
+	}
+
+}

@@ -1,0 +1,37 @@
+package instrumentClasses;
+
+public class Instruments {
+	
+		//Declare Instruments Class Attributes
+		public String strInstrumentCategory = "dftInstrumentCategory";
+		public String strInstrumentName = "dftInstrumentName";
+		public int intInstrumentId = 0;
+		
+		//Getters and setters for InstrumentCategory
+		public String getStrInstrumentCategory() {
+			return strInstrumentCategory;
+		}
+		public void setStrInstrumentCategory(String strInstrumentCategory) {
+			this.strInstrumentCategory = strInstrumentCategory;
+		}
+		
+		//Getters and setters for InstrumentName
+		public String getStrInstrumentName() {
+			return strInstrumentName;
+		}
+		public void setStrInstrumentName(String strInstrumentName) {
+			this.strInstrumentName = strInstrumentName;
+		}
+		
+		//Getters and setters for InstrumentId
+		public int getIntInstrumentId() {
+			return intInstrumentId;
+		}
+		public void setIntInstrumentId(int intInstrumentId) {
+			this.intInstrumentId = intInstrumentId;
+		}		
+
+		
+	}
+
+

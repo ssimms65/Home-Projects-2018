@@ -1,0 +1,160 @@
+package Project_Classes;
+
+/**
+ * @author COE11185796
+ * @category Assesment_2_Class_House
+ */
+
+public class Class_House 
+{
+	
+	//*- Start Of Declaring House Class Attributes -*\\
+	public String strHouseReference = "dftHouseReference";
+	public String strHouseLocation = "dftHouseLocation";
+	public String strHouseType = "dftHouseType";
+	public int intNumberOfBedrooms = 0;
+	public int intNumberOfReceptionRooms = 0;
+	public boolean blnGarage = false;
+	//*- End Of Declaring House Class Attributes -*\\
+	
+	
+	//*- Start Of Get / Set For Attributes *\\
+	
+		// Get / Set For House Reference \\
+		public String getHouseReference ()
+		{
+			return strHouseReference;
+		}
+		
+		public void setHouseReference (String strNewHouseReference)
+		{
+			strHouseReference = strNewHouseReference;
+		}
+		// End Of Get / Set For House Reference \\
+		
+		
+		// Get / Set For House Location \\
+		public String getHouseLocation ()
+		{
+			return strHouseLocation;
+		}
+		
+		public void setHouseLocation (String strNewHouseLocation)
+		{
+			strHouseLocation = strNewHouseLocation;
+		}
+		// End Of Get / Set For House Location \\
+		
+		
+		// Get / Set For House Type \\
+		public String getHouseType ()
+		{
+			return strHouseType;
+		}
+		
+		public void setHouseType (String strNewHouseType)
+		{
+			strHouseType = strNewHouseType;
+		}
+		// End Of Get / Set For House Type \\
+		
+		
+		// Get / Set For Number Of Bedrooms \\
+		public int getNumberOfBedrooms()
+		{
+			return intNumberOfBedrooms;
+		}
+		
+		public void setNumberOfBedrooms (int intNewNumberOfBedrooms)
+		{
+			intNumberOfBedrooms = intNewNumberOfBedrooms;
+		}
+		// End Of Get / Set For Number Of Bedrooms \\
+		
+		
+		// Get / Set For Number Of Reception Rooms \\
+		public int getNumberOfReceptionRooms()
+		{
+			return intNumberOfReceptionRooms;
+		}
+		
+		public void setNumberOfReceptionRooms (int intNewNumberOfReceptionRooms)
+		{
+			intNumberOfReceptionRooms = intNewNumberOfReceptionRooms;
+		}
+		// End Of Get / Set For Number Of Reception Rooms \\
+		
+		
+		// Get / Set For Garage \\
+		public String getGarage()
+		{
+			if (blnGarage)
+			{
+				return "Yes";
+			}
+			else
+			{
+				return "No";
+			}
+		}
+		
+		public void setGarage(String strNewGarage)
+		{
+			if (strNewGarage.toLowerCase().startsWith("y"))
+			{
+				blnGarage = true;
+			}
+			else
+			{
+				blnGarage = false;
+			}
+		}
+		// End Of Get / Set For Garage \\
+		
+	//*- End Of Get / Set For Attributes *\\
+		
+		
+	//*- Start Of Default Constructor & Overload Constructor -*\\
+		
+		// Default Constructor \\
+		public Class_House() throws Exception
+		{
+			strHouseReference = "dftHouseReference";
+			strHouseLocation = "dftHouseLocation";
+			strHouseType = "dftHouseType";
+			intNumberOfBedrooms = 0;
+			intNumberOfReceptionRooms = 0;
+			blnGarage = false;	
+		}
+		// End Of Default Constructor \\
+		
+		
+		// Overload Constructor \\
+		public Class_House(String strNewHouseReference, String strNewHouseLocation, String strNewHouseType, int intNewNumberOfBedrooms, int intNewNumberOfReceptionRooms, boolean blnNewGarage) throws Exception 
+		{
+			strHouseReference = strNewHouseReference;
+			strHouseLocation = strNewHouseLocation;
+			strHouseType = strNewHouseType;
+			intNumberOfBedrooms = intNewNumberOfBedrooms;
+			intNumberOfReceptionRooms = intNewNumberOfReceptionRooms;
+			blnGarage = blnNewGarage;	
+		}
+		// End Of Overload Constructor \\
+		
+	//*- End Of Default Constructor & Overload Constructor -*\\
+		
+		
+	//*- Start Of Display Method -*\\
+		
+		public void Display_Class_House()
+		{
+			System.out.println("House Reference   : " + strHouseReference);
+			System.out.println("House Location    : " + strHouseLocation);
+			System.out.println("House Type        : " + strHouseType);
+			System.out.println("No. Of Bedrooms   : " + intNumberOfBedrooms);
+			System.out.println("No. Of Receptions : " + intNumberOfReceptionRooms);
+			System.out.println("Garage (True/False) : " + blnGarage);
+		}
+		
+	//*- End Of Display Method -*\\
+}

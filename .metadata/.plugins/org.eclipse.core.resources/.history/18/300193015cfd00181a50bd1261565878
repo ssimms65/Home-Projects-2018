@@ -1,0 +1,43 @@
+package instrumentClasses;
+
+public class Percussion extends Instruments {
+
+	public String strPercussionInstrumentName;
+	public int intPercussionInstrumentId;
+
+	// Overload constructors
+	public Percussion(String strNewInstrumentGroup, String strNewInstrumentName, int intNewInstrumentId,
+			String strNewPercussionInstrumentName, int intNewPercussionInstrumentId) {
+		super(strNewInstrumentGroup, strNewInstrumentName, intNewInstrumentId);
+		this.strPercussionInstrumentName = strNewPercussionInstrumentName;
+		this.intPercussionInstrumentId = intNewPercussionInstrumentId;
+	}
+
+	// Display Class
+	public void Display_Class_Percussion() {
+
+		super.Display_Class_Instruments();
+		System.out.println("Percussion Instrument Name : " + strPercussionInstrumentName);
+		System.out.println("Percussion Instrument Id   : " + intPercussionInstrumentId);
+
+	}
+
+	// Getters and setters for PercussionInstrumentName
+	public String getStrPercussionInstrumentName() {
+		return strPercussionInstrumentName;
+	}
+
+	public void setStrPercussionInstrumentName(String strNewPercussionInstrumentName) {
+		this.strPercussionInstrumentName = strNewPercussionInstrumentName;
+	}
+
+	// Getters and setters for PercussionInstrumentId
+	public int getIntPercussionInstrumentId() {
+		return intPercussionInstrumentId;
+	}
+
+	public void setIntPercussionInstrumentId(int intNewPercussionInstrumentId) {
+		this.intPercussionInstrumentId = intNewPercussionInstrumentId;
+	}
+
+}

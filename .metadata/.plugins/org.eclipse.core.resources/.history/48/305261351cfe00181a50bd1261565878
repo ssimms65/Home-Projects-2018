@@ -1,0 +1,27 @@
+package Project_Testing;
+
+import org.junit.Before;
+import static org.junit.Assert.*;
+import org.junit.Test;
+
+
+import Project_Classes.Class_HouseForSale;
+
+public class Test_Class_House 
+{
+
+	Class_HouseForSale hfs1, hfs2;
+	
+	@Before
+	public void SetUp() throws Exception 
+	{
+		hfs1 = new Class_HouseForSale();
+	}
+
+	@Test
+	public void Test_HouseReference() throws Exception
+	{
+		String Expected = "R0001";
+		assertEquals(Expected, hfs1.getHouseReference());
+	}
+}
