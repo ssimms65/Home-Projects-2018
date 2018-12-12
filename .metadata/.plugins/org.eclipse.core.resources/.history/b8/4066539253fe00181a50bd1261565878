@@ -3,8 +3,8 @@ package instrumentClasses;
 public class Brass extends Instruments {
 
 	// Properties
-	private String brassInstrumentName;
-	private int brassInstrumentId;
+	public String brassInstrumentName;
+	public int brassInstrumentId;
 
 	// Overload constructors
 	public Brass(String strNewInstrumentGroup, String strNewInstrumentName, int intNewInstrumentId,
@@ -15,9 +15,9 @@ public class Brass extends Instruments {
 	}
 
 	// Display Class
-	public void displayClassBrass() {
+	public void Display_Class_Brass() {
 
-		super.displayClassInstruments();
+		super.Display_Class_Instruments();
 		System.out.println("Brass Instrument Name : " + brassInstrumentName);
 		System.out.println("Brass Instrument Id   : " + brassInstrumentId);
 

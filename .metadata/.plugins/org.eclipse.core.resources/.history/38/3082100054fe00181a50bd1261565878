@@ -3,8 +3,8 @@ package instrumentClasses;
 public class Strings extends Instruments {
 
 	// Properties
-	private String stringsInstrumentName;
-	private int stringsInstrumentId;
+	public String stringsInstrumentName;
+	public int stringsInstrumentId;
 
 	// Overload constructors
 	public Strings(String strNewInstrumentGroup, String strNewInstrumentName, int intNewInstrumentId,
@@ -15,9 +15,9 @@ public class Strings extends Instruments {
 	}
 
 	// Display Class
-	public void displayClassStrings() {
+	public void Display_Class_Strings() {
 
-		super.displayClassInstruments();
+		super.Display_Class_Instruments();
 		System.out.println("Strings Instrument Name : " + stringsInstrumentName);
 		System.out.println("Strings Instrument Id   : " + stringsInstrumentId);
 

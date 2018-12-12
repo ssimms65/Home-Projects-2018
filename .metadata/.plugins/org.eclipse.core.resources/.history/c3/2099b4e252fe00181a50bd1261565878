@@ -26,19 +26,18 @@ public class WhaleWatcher {
 			}
 			;
 
-		//First Print
+		//Print
 		System.out.println("Whale Details");
 		printAllWhalesInfo(whales);
 			
-		}	
+		}
+		
 			
 		//First Print
 		public static void printAllWhalesInfo(ArrayList<Whale> whales) {
 			for (Whale whale : whales) {
-		System.out.println(whale.toString() + "");
+		System.out.println(whale.toString() + "\n");
 		}
-			
-			
 	}		
 }
 

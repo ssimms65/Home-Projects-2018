@@ -3,8 +3,8 @@ package instrumentClasses;
 public class Woodwind extends Instruments {
 
 	// Properties
-	private String woodwindInstrumentName;
-	private int woodwindInstrumentId;
+	public String woodwindInstrumentName;
+	public int woodwindInstrumentId;
 
 	// Overload constructors
 	public Woodwind(String strNewInstrumentGroup, String strNewInstrumentName, int intNewInstrumentId,
@@ -15,9 +15,9 @@ public class Woodwind extends Instruments {
 	}
 
 	// Display Class
-	public void displayClassWoodwind() {
+	public void Display_Class_Woodwind() {
 
-		super.displayClassInstruments();
+		super.Display_Class_Instruments();
 		System.out.println("Woodwind Instrument Name : " + woodwindInstrumentName);
 		System.out.println("Woodwind Instrument Id   : " + woodwindInstrumentId);
 

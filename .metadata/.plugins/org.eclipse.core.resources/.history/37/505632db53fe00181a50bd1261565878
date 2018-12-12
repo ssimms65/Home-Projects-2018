@@ -15,9 +15,9 @@ public class Brass extends Instruments {
 	}
 
 	// Display Class
-	public void displayClassBrass() {
+	public void Display_Class_Brass() {
 
-		super.displayClassInstruments();
+		super.Display_Class_Instruments();
 		System.out.println("Brass Instrument Name : " + brassInstrumentName);
 		System.out.println("Brass Instrument Id   : " + brassInstrumentId);
 

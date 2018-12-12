@@ -26,7 +26,8 @@ public class Whale extends Animal {
 	public String toString() {
 		return "Whale [mainOcean=" + mainOcean + ", weight=" + weight + ", maxSpeed=" + maxSpeed + ", length=" + length
 				+ ", getMainOcean()=" + getMainOcean() + ", getWeight()=" + getWeight() + ", getMaxSpeed()="
-				+ getMaxSpeed() + ", getLength()=" + getLength() + ", getName()=" + getName() + ",]";
+				+ getMaxSpeed() + ", getLength()=" + getLength() + ", getName()=" + getName() + ", getClass()="
+				+ getClass() + ", hashCode()=" + hashCode() + ", toString()=" + super.toString() + "]";
 	}
 
 	public String getMainOcean() {

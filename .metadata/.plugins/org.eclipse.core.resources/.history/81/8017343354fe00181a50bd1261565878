@@ -15,7 +15,7 @@ public class Musicians {
 	}
 
 	// Display Method
-	public void displayClassMusicians() {
+	public void Display_Class_Musicians() {
 		System.out.println("Musicians Name        : " + musiciansName);
 		System.out.println("Musicians Instrument  : " + musiciansInstrument);
 		System.out.println("Musicians Id          : " + musiciansId);

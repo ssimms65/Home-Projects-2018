@@ -15,7 +15,7 @@ public class Instruments {
 	}
 
 	// Display Method
-	public void displayClassInstruments() {
+	public void Display_Class_Instruments() {
 		System.out.println("Instruments Group  : " + instrumentGroup);
 		System.out.println("Instruments Name   : " + instrumentName);
 		System.out.println("Instruments Id     : " + instrumentId);

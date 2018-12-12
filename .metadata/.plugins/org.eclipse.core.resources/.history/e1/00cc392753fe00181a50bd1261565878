@@ -38,6 +38,18 @@ public class WhaleWatcher {
 		System.out.println(whale.toString() + "");
 		}
 			
+		//Second Print
+		System.out.println("Whales that swim mostly in the Atlanic");
+		printWhalesByOcean(whales, "altanic");
+		}			
+		
+		//Second Print
+		public static void printWhalesByOcean(ArrayList<Whale> whales, String ocean) {
+			for (Whale whale : whales) {
+				if (whale.getMainOcean().equalsIgnoreCase(ocean)) {
+		System.out.println(whale.toString() + "");
+		}
+		}
 			
 	}		
 }
